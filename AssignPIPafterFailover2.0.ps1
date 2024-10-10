@@ -15,9 +15,9 @@ Install-Module -Name Az.network -Force
 #####################
 
 #CreatePIP
-New-AzPublicIpAddress -Name 'pip-KGSVFPS01-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Basic -AllocationMethod Static -IpAddressVersion IPv4
-New-AzPublicIpAddress -Name 'pip-AXApps-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Basic -AllocationMethod Static -IpAddressVersion IPv4
-New-AzPublicIpAddress -Name 'pip-AXSQLPRD-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Basic -AllocationMethod Static -IpAddressVersion IPv4
+New-AzPublicIpAddress -Name 'pip-KGSVFPS01-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Standard -AllocationMethod Static -IpAddressVersion IPv4
+New-AzPublicIpAddress -Name 'pip-AXApps-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Standard -AllocationMethod Static -IpAddressVersion IPv4
+New-AzPublicIpAddress -Name 'pip-AXSQLPRD-test' -ResourceGroupName AzureStackHCIRecoveryRG -Location westus -Sku Standard -AllocationMethod Static -IpAddressVersion IPv4
 
 #Allow time for the PIP to create prior to setting variables/updating NIC
 Start-Sleep -Seconds 15
